@@ -1,0 +1,148 @@
+//Tablets and Smaller
+@media(max-width:800px){
+    #header-home{
+        height: 30rem;
+
+        .header-content{
+            padding-top: 5rem;
+
+            h1{
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+// Smartphones
+@media(max-width:500px){
+    #main-nav{
+        flex-direction: column;
+        align-items: center;
+        
+        li{
+            padding:1rem;
+        }
+    }
+    .logo{
+        padding-top: 1rem;
+        text-align: center;
+    }
+
+    #header{
+        &-home{
+            height: 10rem;
+            border-bottom: 3px solid $main-color;
+
+            .header-content{
+                display: none;
+            }
+        }
+        &-inner{
+            height: 10rem;
+            background: $bg-image no-repeat center right/cover;
+        }
+
+    }
+
+    // stack grid items
+    #home-a .specials,
+    #home-b .stats,
+    #home-c .process,
+    #about-d .testmonials,
+    #contact-b .contact-info,
+    .items{
+        grid-template-columns: 1fr;
+    }
+
+    // home sections
+    #home{
+        &-a{
+            .specials div{
+            border-bottom: 2px $light-color solid;
+            padding-bottom: 1rem;
+
+            &:last-child{
+                border: none;
+                padding-bottom: 0;
+            }
+        }
+    }
+        
+        &-b{
+            .stats div{
+                padding:2rem 0px;
+            }
+        }
+    
+}
+
+// About
+#about{
+    &-a{
+        .about-info{
+            grid-template-areas: 
+                "bio-img"
+                "bio"
+                "aw-1"
+                "aw-2"
+                "aw-3";
+        }
+    }
+
+    &-c{
+        display: none;
+    }
+}
+
+// contact
+#contact{
+    &-a{
+        .text-fields{
+          
+            grid-template-areas: 
+                'name'
+                'email'
+                'subject'
+                'phone'
+                'message'
+            }
+    }
+
+    &-b{
+       
+        div{
+            margin-bottom: 1rem;
+            padding-bottom:  1rem;
+            border-bottom: 1px solid #555;
+
+            &:last-child{
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: 0;
+            }
+
+        }
+    }
+}
+
+// main footer
+#main-footer{
+    height: 7rem;
+    padding-top: 1rem;
+    margin-top: 0;
+    .footer-content{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        div{
+            padding-top: 0.5rem;
+        }
+
+    }
+}
+
+
+}
+
+  
